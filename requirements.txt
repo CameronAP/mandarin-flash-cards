@@ -1,0 +1,4 @@
+polars
+elevenlabs
+pyside6
+pypinyin
