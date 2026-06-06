@@ -10,8 +10,8 @@ tts_func_map = {
     tts_types.elevenlabs: text_to_voice_elevenlabs
 }
 def create_card(row):
-    chars = re.sub(r'([?!\.]+)', r'\1 ', re.sub(r'[^\w\(\)\?\!\.\,]+', "", row[0])).strip()
-    pinyin = re.sub(r'([?!\.]+)', r'\1 ', re.sub(r'[^\w\(\)\?\!\.\,]+', "", row[1])).strip()
+    chars = re.sub(r'([?!\.]+)', r'\1 ', re.sub(r'[^\w\(\)\?\!\.\,\-]+', "", row[0])).strip()
+    pinyin = re.sub(r'([?!\.]+)', r'\1 ', re.sub(r'[^\w\(\)\?\!\.\,\-]+', "", row[1])).strip()
     english = re.sub(r'[^\w\(\)\?\!\.\, ]+', "", row[2]).strip()
 
     audio = tts_func_map[tts_types.online](chars)
